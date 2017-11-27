@@ -6,7 +6,7 @@ public class Funcionario {
 	private double salario;
 	private String dataEntrada;
 	private String RG;
-		
+
 	public Funcionario() {
 		super();
 	}
@@ -23,39 +23,35 @@ public class Funcionario {
 	public String getNome() {
 		return nome;
 	}
-	
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
+
 	public Departamento getDepartamento() {
 		return departamento;
 	}
-	
+
 	public void setDepartamento(Departamento departamento) {
 		this.departamento = departamento;
 	}
-	
+
 	public double getSalario() {
 		return salario;
 	}
-	
+
 	public void setSalario(double salario) {
 		this.salario = salario;
 	}
-	
+
 	public String getDataEntrada() {
 		return dataEntrada;
 	}
-	
-	public void setDataEntrada(String dataEntrada) {
-		this.dataEntrada = dataEntrada;
-	}
-	
+
 	public String getRG() {
 		return RG;
 	}
-	
+
 	public void setRG(String RG) {
 		this.RG = RG;
 	}
@@ -65,20 +61,20 @@ public class Funcionario {
 		return "Funcionario [nome=" + nome + ", departamento=" + departamento.getNome() + ", salario=" + salario
 				+ ", dataEntrada=" + dataEntrada + ", RG=" + RG + "]";
 	}
-	
+
 	public String toString(int t) {
 		return "Funcionario:"+nome;
 	}
-	
+
 	public boolean recebeAumento(double valor) {
 		salario += valor;
 		return true;
 	}
-	
+
 	public double calculaGanhoAnual() {
 		return salario * 12;
 	}
-	
+
 	public void print() {
 		String dados = "Novo Funcionário\n";
 		dados += "\nNome: "+nome;
@@ -86,8 +82,12 @@ public class Funcionario {
 		dados += "\nSalário: R$"+salario;
 		dados += "\nAdmissão: "+dataEntrada;
 		dados += "\nRG: "+RG;
-		
+
 		System.out.println(dados);
 	}
-	
+
+	public double getBonificacao() {
+		return salario * 0.10;
+	}
+
 }

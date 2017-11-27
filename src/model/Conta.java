@@ -30,10 +30,6 @@ public class Conta {
 		return numero;
 	}
 
-	public void setNumero(int numero) {
-		this.numero = numero;
-	}
-
 	public String getTipo() {
 		return tipo;
 	}
@@ -54,18 +50,6 @@ public class Conta {
 		return saldo;
 	}
 
-	public void setSaldo(double saldo) {
-		this.saldo = saldo;
-	}
-
-	public double getLimite() {
-		return limite;
-	}
-
-	public void setLimite(double limite) {
-		this.limite = limite;
-	}
-
 	public boolean saca(double valor) {
 		if(saldo+limite >= valor) {
 			if(valor > saldo) {
@@ -82,7 +66,7 @@ public class Conta {
 	}
 	
 	public boolean deposita(double valor) {
-		if(saldo + valor > limite) {
+		if(valor <= 0) {
 			return false;
 		}else {
 			saldo += valor;
